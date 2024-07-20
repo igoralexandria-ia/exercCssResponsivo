@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: #fde400;
+    padding-top: 16px;
+    color: #000000;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #fde400;
+    padding-top: 16px;
+    color: #000000;
+    margin-top: 24px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+    filter: invert(100%)
+}
+
+footer li img {
+    height: 32px;    
+}
+
+header > .container,
+footer > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+h2 {
+    color: #fde400;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(3, 3, 3, 0.6);
+}
+
+hr {
+    margin-bottom: 24px;
+}
+
+nav {
+    padding: 16px 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.conteudo {
+    display: flex;
+}
+
+.produto img {
+    max-width: 100%;
+}
+
+.about-store {
+    margin-bottom: 56px;
+}
+
+.about-store .produto a {
+    display: flex;
+    font-size: 2em;
+}
+
+.about-store .produto {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-direction: row;
+}
+
+.about-store .produto > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-store .produto img {
+    margin-right: 16px;
+    height: auto;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 1%;
+    row-gap: 5%;
+    list-style: none;
+}
+
+.produtos li h3 {
+    margin: 12px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #fde400;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+    flex-grow: 1;
+}
+
+/*Até o tamanho médio de um celular*/
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    .produtos .produto {
+        margin-bottom: 32px;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav {
+        margin-top: 0;
+    }
+
+    header nav li {
+        display: inline;
+        margin-left: 16px;
+    }
+
+    .about-store .produto {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-store .produto img {
+        margin: 0 0 16px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 16px 0;
+        text-align: center;
+    }
+
+    footer .container {
+        display: flex;
+    }
+
+}
+
+
+/*Responsividade para dispositivos iPad*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .about-store .produto a {
+        font-size:  1.5em;
+    }
+
+    .about-store .produto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-store .produto img {
+        margin: 0 0 16px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .footer {
+        padding-top: 36px;
+    }
+}
